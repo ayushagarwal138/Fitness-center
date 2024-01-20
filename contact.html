@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Fitness Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-image: url(./c.jpg);
+        }
+
+        .header {
+            background-color: #11ed8d;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            margin: 0 auto;
+            max-width: 1000px;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .contact-form {
+            background-color: #c7ec0a;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-field {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height: 150px;
+        }
+
+        .form-button {
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-button:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Fitness Center</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-form">
+                <form>
+                    <div class="form-field">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" class="form-input">
+                    </div>
+                    <div class="form-field">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input">
+                    </div>
+                    <div class="form-field">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" class="form-textarea"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <button type="submit" class="form-button">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
