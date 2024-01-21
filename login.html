@@ -75,38 +75,23 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Login</h1>
-        <form id="loginForm" onsubmit="loginUser(event)">
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+          <div class="input-group">
             <label for="username">Username:</label>
-            <input type="text" id="loginUsername" name="username">
-
+            <input type="text" id="username" name="username" required>
+          </div>
+          <div class="input-group">
             <label for="password">Password:</label>
-            <input type="password" id="loginPassword" name="password">
-
-            <button type="submit">Login</button>
+            <input type="password" id="password" name="password" required>
+            <input type="checkbox" onclick="myFunction()">Show Password
+          </div>
+          <button type onclick="redirect()"="submit" id="button">Login</button>
         </form>
-        <div class="link">
-            <a href="#">Forgot password?</a>
-        </div>
-    </div>
-    <script>
-        function loginUser(event) {
-            event.preventDefault();
-            const loginUsername = document.getElementById('loginUsername').value;
-            const loginPassword = document.getElementById('loginPassword').value;
-            const users = JSON.parse(localStorage.getItem('users')) || [];
-
-            const user = users.find(u => u.username === loginUsername && u.password === loginPassword);
-
-            if (user) {
-                alert('Login successful! Welcome back, ' + loginUsername);
-            } else {
-                alert('Invalid username or password. Please try again.');
-            }
-
-            document.getElementById('loginForm').reset();
-        }
-    </script>
+        <p id="error-message" class="error-message"></p>
+      </div>
+    
+      <script src="script.js"></script>
 </body>
 </html>
