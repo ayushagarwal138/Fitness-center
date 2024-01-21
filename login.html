@@ -77,12 +77,12 @@
 <body>
     <div class="container">
         <h1>Login</h1>
-        <form action="">
+        <form id="loginForm" onsubmit="loginUser(event)">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
+            <input type="text" id="loginUsername" name="username">
 
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
+            <input type="password" id="loginPassword" name="password">
 
             <button type="submit">Login</button>
         </form>
@@ -90,5 +90,23 @@
             <a href="#">Forgot password?</a>
         </div>
     </div>
+    <script>
+        function loginUser(event) {
+            event.preventDefault();
+            const loginUsername = document.getElementById('loginUsername').value;
+            const loginPassword = document.getElementById('loginPassword').value;
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+
+            const user = users.find(u => u.username === loginUsername && u.password === loginPassword);
+
+            if (user) {
+                alert('Login successful! Welcome back, ' + loginUsername);
+            } else {
+                alert('Invalid username or password. Please try again.');
+            }
+
+            document.getElementById('loginForm').reset();
+        }
+    </script>
 </body>
 </html>
