@@ -90,14 +90,17 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password">
 
-            <button type="submit">Register</button>
+            <button type onclick="redirect()"="submit">Register</button>
         </form>
         <div class="link">
             Already have an account? <a href="login.html">Login</a>
         </div>
     </div>
     <script>
-        
+        function redirect(){
+            var target="index.html"
+            window.location.href=target
+        }
 
         function registerUser(event) {
             event.preventDefault();
